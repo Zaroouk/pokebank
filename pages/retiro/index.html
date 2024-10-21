@@ -1,0 +1,110 @@
+<!-- retiro efectivo -->
+<!-- empieza con un menu de que cuenta desea retirar dinero -->
+<!-- muestra las cuentas con botones -->
+<!-- muestra un modal con la cantidad a retirar en un input -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <style>
+    dialog[open] {
+    animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
+    z-index:-10
+  }
+  
+    dialog::backdrop {
+      background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(54, 54, 54, 0.5));
+      backdrop-filter: blur(3px);
+    }
+    
+   
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  } 
+  </style>
+
+
+  <body class="flex justify-center items-center flex-col min-h-screen bg-gray-100 mt-10 ">
+    
+    
+      <button class="bg-gray-700 text-white p-2 rounded-xl">Cerrar Sesion</button>
+    
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/Pok%C3%A9mon_Bank_logo.png" id="header" class="w-80 mb-8">
+    
+    <!-- <button class="bg-gray-700 text-white p-5 w-full rounded-lg">Deposito</button> -->
+    <div id="accounts-space" class="mx-10 p-6 bg-white rounded-xl shadow-md flex flex-col gap-5 w-[75vw]">
+    </div>
+    
+
+
+    <section class=" flex h-screen w-screen p-10 justify-center items-start">
+        <!-- <button onclick="document.getElementById('myModal').showModal()" id="btn" class="py-3 px-10 bg-gray-800 text-white rounded-lg text shadow-xl">Open</button> -->
+      </section>
+      
+      <dialog id="myModal" class="h-auto w-11/12 md:w-1/2 p-5 bg-white rounded-md">
+        <div class="flex flex-col w-full h-auto">
+            <!-- Header -->
+            <div class="flex w-full h-auto justify-center items-center">
+                <div class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold text-center flex flex-col">
+                    <span id="modalHeader">Modal Header</span>
+                    <span id="modalHeader2">Modal Header</span>
+                </div>
+                <div onclick="document.getElementById('myModal').close();" class="flex w-1/12 h-auto justify-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+            <!-- Modal Content -->
+            <div class="flex w-full h-auto py-10 px-2 justify-center items-center bg-gray-200 rounded text-center text-gray-500 mt-20">
+                <div id="modalContent">This is a text inside the modal.</div>
+                <!-- <p><strong>Propietario:</strong></p> -->
+            </div>
+            
+            <div>
+                <p class="text-center my-10"><strong>Cantidad a Retirar</strong></p>
+        <div class="flex mx-10">
+        <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md">
+            $
+        </span>
+        <input type="text" id="deposito-amount" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5" placeholder="elonmusk">
+            </div>
+        </div>
+        <button class="mt-10 py-3 px-10 bg-gray-800 text-white rounded-lg text shadow-xl" onclick='ValidateSubmit()'>Retirar</button>
+        <button class="my-5 py-3 px-10 bg-gray-800 text-white rounded-lg text shadow-xl" onclick="document.getElementById('myModal').close();">Cerrar</button>
+    </dialog>
+    
+
+    
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+    <script>
+        const POKEBANK_URL = "https://upload.wikimedia.org/wikipedia/en/a/a3/Pok%C3%A9mon_Bank_logo.png"
+        // document.getElementById("header").src = POKEBANK_URL
+
+
+
+
+
+    </script>
+    
+  </body>
+</html>

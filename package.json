@@ -1,0 +1,16 @@
+{
+  "name": "pokebank",
+  "version": "1.0.0",
+  "description": "trabajo escrito o Portada. o Introducción. o Índice. o Objetivos Generales y Específicos. (en la misma página) o Desarrollo del análisis de proyecto (flujogramas y pantallas) o Investigaciones y versionamiento del código o Conclusiones.",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert": "^2.1.2"
+  }
+}

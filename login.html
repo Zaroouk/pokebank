@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="flex justify-center items-center flex-col min-h-screen bg-gray-100"> 
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/Pok%C3%A9mon_Bank_logo.png" id="header" class="w-80 mb-8"> 
+    <form class="mx-auto my-auto place-content-around"> 
+      <div class="flex mb-2 space-x-2 rtl:space-x-reverse">
+          <div>
+              <label for="code-1" class="sr-only">First code</label>
+              <input onchange="validateNumberInput()" type="text" maxlength="1" data-focus-input-init data-focus-input-next="code-2" id="code-1" class="block w-16 h-16 py-3 text-5xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-xl focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+          </div>
+          <div>
+              <label for="code-2" class="sr-only">Second code</label>
+              <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-1" data-focus-input-next="code-3" id="code-2" class="block w-16 h-16 py-3 text-5xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-xl focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+          </div>
+          <div>
+              <label for="code-3" class="sr-only">Third code</label>
+              <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-2" data-focus-input-next="code-4" id="code-3" class="block w-16 h-16 py-3 text-5xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-xl focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+          </div>
+          <div>
+              <label for="code-4" class="sr-only">Fourth code</label>
+              <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-3" data-focus-input-next="code-5" id="code-4" class="block w-16 h-16 py-3 text-5xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-xl focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+          </div>
+      </div>
+      <p id="helper-text-explanation" class="text-center mt-2 text-sm text-gray-500 dark:text-gray-400">Introduce Tu Codigo PIN</p>
+    </form>
+
+    <script src="main.js"></script>
+    <script>
+        const POKEBANK_URL = "https://upload.wikimedia.org/wikipedia/en/a/a3/Pok%C3%A9mon_Bank_logo.png"
+        // document.getElementById("header").src = POKEBANK_URL
+
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="flex justify-center items-center flex-col min-h-screen bg-gray-100 mt-10 "> <!-- Body class -->
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/Pok%C3%A9mon_Bank_logo.png" id="header" class="w-80 mb-8"> <!-- Image with margin below -->
+
+    <!-- component -->
+<div class="max-w-[720px] mx-auto">
+    <div class="flex justify-center">
+        <div class="w-full max-w-sm min-w-[200px]">
+            <label class="block mb-1 text-sm text-slate-800">
+                Seleccionar Usuario
+            </label>
+
+            <div class="relative">
+                <select
+                id="selectedSelect"
+                    class="w-full h-10 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer"
+                >
+                <!-- values options -->
+                </select>
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="1.2" 
+                    stroke="currentColor" 
+                    class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700"
+                >
+                    <path 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" 
+                    />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <form class="mx-auto my-auto p-6 bg-white rounded-xl shadow-md" id="loginForm"> <!-- Added padding and background to form -->
+      <div class="flex mb-4 space-x-4"> <!-- Margin below and space between inputs -->
+          <div>
+              <label for="code-1" class="sr-only">First code</label>
+              <input onchange="validateNumberInput()" type="text" maxlength="1" data-focus-input-init data-focus-input-next="code-2" id="code-1" class="block w-16 h-16 py-3 text-5xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-xl focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+          </div>
+          <div>
+              <label for="code-2" class="sr-only">Second code</label>
+              <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-1" data-focus-input-next="code-3" id="code-2" class="block w-16 h-16 py-3 text-5xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-xl focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+          </div>
+          <div>
+              <label for="code-3" class="sr-only">Third code</label>
+              <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-2" data-focus-input-next="code-4" id="code-3" class="block w-16 h-16 py-3 text-5xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-xl focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+          </div>
+          <div>
+              <label for="code-4" class="sr-only">Fourth code</label>
+              <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-3" data-focus-input-next="code-5" id="code-4" class="block w-16 h-16 py-3 text-5xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-xl focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+          </div>
+      </div>
+      <p id="helper-text-explanation" class="text-center mt-2 text-sm text-gray-500 dark:text-gray-400">Introduce Tu Codigo PIN</p>
+      <button onclick="ValidateLogin()" class="bg-gray-700 text-white p-5 w-full rounded-lg mt-3">Login</button>
+    </form>
+
+    <script src="main.js"></script>
+    <script>
+        const POKEBANK_URL = "https://upload.wikimedia.org/wikipedia/en/a/a3/Pok%C3%A9mon_Bank_logo.png"
+        // document.getElementById("header").src = POKEBANK_URL
+
+    </script>
+  </body>
+</html>

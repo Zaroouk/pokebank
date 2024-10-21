@@ -1,0 +1,42 @@
+<!-- deposito -->
+<!-- retiro -->
+<!-- Consulta Saldo -->
+<!-- Pago Servicios -->
+<!-- Cierre de Sesion -->
+
+<!-- una pagina sencilla con botones que manden a las 
+ direcciones de las opciones arriba mencionadas -->
+
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="flex justify-center items-center flex-col min-h-screen bg-gray-100 mt-10 ">
+    <button class="bg-gray-700 text-white p-2 place-self-end mr-5 rounded-xl">Cerrar Sesion</button>
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/Pok%C3%A9mon_Bank_logo.png" id="header" class="w-80 mb-8">
+    
+    <div class="m-auto p-6 bg-white rounded-xl shadow-md flex space-x-40">
+        <div class="flex flex-col gap-20 w-[35vw]">
+            <button class="bg-gray-700 text-white p-5 w-full rounded-lg" onclick="location.href='/POKEBANK/pages/deposito'">Deposito</button>
+            <button class="bg-gray-700 text-white p-5 w-full rounded-lg" onclick="location.href='/POKEBANK/pages/retiro'">Retiro</button>
+        </div>
+        <div class="flex flex-col gap-20 w-[35vw]">
+            <button class="bg-gray-700 text-white p-5 w-full rounded-lg" onclick="location.href='/POKEBANK/pages/consulta'">Consulta de Saldo</button>
+            <button class="bg-gray-700 text-white p-5 w-full rounded-lg" onclick="location.href='/POKEBANK/pages/pago'">Pago Servicios</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        const POKEBANK_URL = "https://upload.wikimedia.org/wikipedia/en/a/a3/Pok%C3%A9mon_Bank_logo.png"
+        // document.getElementById("header").src = POKEBANK_URL
+
+    </script>
+  </body>
+</html>
