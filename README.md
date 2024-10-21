@@ -1,8 +1,14 @@
-trabajo escrito
-o Portada.
-o Introducción.
-o Índice.
-o Objetivos Generales y Específicos. (en la misma página)
-o Desarrollo del análisis de proyecto (flujogramas y pantallas)
-o Investigaciones y versionamiento del código
-o Conclusiones.
+# Aplicación de Presupuestos
+
+### Repositorio
+
+[Repositorio](https://github.com/Zaroouk/pokebank)
+
+### Integrantes
+
+**Emanuel Antonio Peña Menjivar**
+  - Carné: PM223106
+  - Correo: emanuel.menjivar11@gmail.com
+
+
+
